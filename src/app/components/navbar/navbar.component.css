@@ -1,0 +1,109 @@
+.img-avatar {
+  height: 3em;
+}
+
+.nav__label {
+  position: fixed;
+  top: 0.1em;
+  right: 0.3em;
+  font-size: 1.5em;
+}
+
+.nav__label > button {
+  background: transparent;
+  border: none;
+}
+
+.nav__input {
+  display: none;
+}
+
+.nav__input:checked ~ .nav__menu {
+  clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
+}
+
+.nav__menu {
+  /*background: linear-gradient(to right, var(--secondary-light-color) 75%, white);*/
+  /*background: linear-gradient(to right, var(--main-light-color), #F5F5F5);*/
+  background: #F9F9F9;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -2.2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin: 0;
+  clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
+  transition: clip-path 1s ease-in-out;
+}
+
+
+/** ITEMS DE MENU **/
+
+.menu-items {
+  list-style: none;
+  padding-top: 5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-items > li > a > h1 {
+  font-weight: bold;
+  color: var(--main-color);
+  line-height: 2.5;
+  transition: font-size 1s;
+}
+
+.menu-items > li > a > h1:hover {
+  animation: headShake;
+  animation-duration: 1s;
+  color: var(--secondary-color);
+  font-size: 3em;
+  text-shadow: 0px 2px 0px var(--main-light-color);
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
+/** DIV COMPANY INFORMATION **/
+
+.company-information {
+  padding-top: 6em;
+  padding-bottom: 5em;
+}
+
+.img-menu-iso {
+  height: 5em;
+}
+
+.img-menu-logo {
+  max-width: 60%;
+}
+
+
+/** SOCIAL MEDIA**/
+
+.social-media-inline {
+  list-style: none;
+  overflow: hidden;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-inline > li > a {
+  color: var(--main-color);
+  padding-right: 2em;
+  font-size: 1.5em;
+}
+
+.social-media-inline > li > a > i:hover {
+  color: var(--secondary-color);
+  animation: rubberBand;
+  animation-duration: 1s;
+}

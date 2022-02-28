@@ -1,0 +1,61 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <a class="nav-link" [routerLink]="['home']">
+      <img src="assets/images/iso-out-1.png" class="img-avatar" alt="greybak-iso">
+    </a>
+
+    <label for="menu" class="nav__label ">
+      <button (click)="openCloseMenu()"><i [class]="menuIcon"></i></button>
+    </label>
+    <input #menuInput type="checkbox" id="menu" [checked]="isOpen" class="nav__input">
+    <div class="nav__menu">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 menu-content">
+          <ul class="menu-items">
+            <li>
+              <a [routerLink]="['/']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
+                INICIO </h1></a>
+            </li>
+            <li>
+              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
+                PRECIOS </h1></a>
+            </li>
+            <li><h1 class="text-center">SERVICIOS</h1></li>
+            <li><h1 class="text-center">CONTÁCTOS</h1></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12 company-information">
+
+          <div class="text-center">
+            <div #divIso>
+              <img src="assets/images/iso-out-1.png" class="img-menu-iso" alt="greybak-iso-out-menu">
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="logo-content">
+              <div #divLogo class="logo-movement">
+                <img src="assets/images/logo-letras-blanco-orange.png" class="img-fluid img-menu-logo"
+                     alt="img-menu-logo">
+              </div>
+            </div>
+          </div>
+
+          <div #socialMedia class="text-center">
+            <ul class="social-media-inline">
+              <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</nav>
+
+
