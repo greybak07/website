@@ -8,12 +8,14 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 //Rutas
 import {APP_ROUTING} from './app.routes';
 import {PricesComponent} from './pages/prices/prices.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PricesComponent
+    PricesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

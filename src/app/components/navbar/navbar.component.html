@@ -1,16 +1,19 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
   <div class="container-fluid">
-    <a class="nav-link" [routerLink]="['home']">
+    <a class="nav-link" [routerLink]="['/']">
       <img src="assets/images/iso-out-1.png" class="img-avatar" alt="greybak-iso">
     </a>
 
     <label for="menu" class="nav__label ">
       <button (click)="openCloseMenu()"><i [class]="menuIcon"></i></button>
     </label>
+
     <input #menuInput type="checkbox" id="menu" [checked]="isOpen" class="nav__input">
+
+    <!-- HIDDEN MENU ALL PAGE -->
     <div class="nav__menu">
       <div class="row">
-        <div class="col-md-6 col-sm-12 menu-content">
+        <div class="col-md-6 col-sm-12">
           <ul class="menu-items">
             <li>
               <a [routerLink]="['/']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
@@ -20,15 +23,20 @@
               <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
                 PRECIOS </h1></a>
             </li>
-            <li><h1 class="text-center">SERVICIOS</h1></li>
-            <li><h1 class="text-center">CONTÁCTOS</h1></li>
+            <li>
+              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
+                SERVICIOS </h1></a>
+            </li>
+            <li>
+              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
+                CONTÁCTOS </h1></a>
+            </li>
           </ul>
         </div>
         <div class="col-md-6 col-sm-12 company-information">
-
           <div class="text-center">
             <div #divIso>
-              <img src="assets/images/iso-out-1.png" class="img-menu-iso" alt="greybak-iso-out-menu">
+              <img src="assets/images/iso-out-1.png" class="img-fluid img-menu-iso" alt="greybak-iso-out-menu">
             </div>
           </div>
           <div class="text-center">
@@ -39,7 +47,6 @@
               </div>
             </div>
           </div>
-
           <div #socialMedia class="text-center">
             <ul class="social-media-inline">
               <li>
@@ -49,13 +56,13 @@
               <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
             </ul>
           </div>
-
         </div>
       </div>
-
-
     </div>
+
+    <div class="nav__menu-particles" id="particles-js">
+      <!-- ANIMACION DE PARTICULAS -->
+    </div>
+
   </div>
 </nav>
-
-

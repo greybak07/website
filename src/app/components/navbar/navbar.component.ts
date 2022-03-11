@@ -1,6 +1,8 @@
 import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 
+declare var executeParticlesMenu: any;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -27,6 +29,7 @@ export class NavbarComponent implements OnInit {
     if (this.isOpen === true) {
       this.menuIcon = "fa-solid fa-xmark";
       this.activeLogoMovement();
+      executeParticlesMenu();
     } else {
       this.menuIcon = "fa-solid fa-bars";
       this.deactiveLogoMovement();
