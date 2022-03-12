@@ -3,6 +3,8 @@ import {Router} from '@angular/router';
 
 declare var executeParticlesMenu: any;
 
+// declare var hideBannerLogo: any;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -14,6 +16,7 @@ export class NavbarComponent implements OnInit {
   @ViewChild('divIso') divIso: any;
   @ViewChild('socialMedia') socialMedia: any;
   @ViewChild('menuInput') menuInput: any;
+  @ViewChild('isoLogoNav') isoLogoNav: any;
 
   menuIcon: String = "fa-solid fa-bars";
   isOpen: boolean = false;
@@ -22,7 +25,12 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // hideBannerLogo();
   }
+
+  // ngDoCheck(): void {
+  //   this.verifyIsoLogoShow();
+  // }
 
   openCloseMenu = () => {
     this.isOpen = !this.isOpen;
@@ -43,7 +51,6 @@ export class NavbarComponent implements OnInit {
     const socialMedia = this.socialMedia;
 
     document.onmousemove = function (event) {
-      console.log("activo")
       let x = event.clientX * 5 / window.innerWidth + "%";
       let y = event.clientY * 80 / window.innerWidth + "%";
 
@@ -71,6 +78,24 @@ export class NavbarComponent implements OnInit {
   deactiveLogoMovement() {
     document.onmousemove = function () {
     };
+  }
+
+  verifyIsoLogoShow() {
+    let isoLogoNav = this.isoLogoNav;
+    if (isoLogoNav != undefined && isoLogoNav != null) {
+      isoLogoNav = isoLogoNav.nativeElement;
+      if (window.pageYOffset === 0) {
+        isoLogoNav.classList.add("hidden");
+      }
+      window.onscroll = function () {
+        let currentYOffset = window.pageYOffset;
+        if (currentYOffset === 0) {
+          isoLogoNav.classList.add('hidden');
+        } else {
+          isoLogoNav.classList.remove('hidden');
+        }
+      }
+    }
   }
 
 }

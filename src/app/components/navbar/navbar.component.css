@@ -1,5 +1,25 @@
+/** ISO AVATAR NAVBAR **/
 .img-avatar {
-  height: 3em;
+  width: 13vw;
+}
+
+.iso-logo {
+  display: block;
+  transition: display 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+/** CLASES DE MENU PRINCIPAL **/
+
+.navbar-menu {
+  background: transparent;
 }
 
 .nav__label {

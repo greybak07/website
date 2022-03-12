@@ -42,6 +42,29 @@ body {
   color: var(--secondary-light-color);
 }
 
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
 .div-page {
-  padding-top: 4.5em;
+  padding: 10vh 0 0;
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/** ESTILOS DE BOTONES  **/
+.btn-secondary-outline {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  transition: .3s ease-in-out all;
+}
+
+.btn-secondary-outline:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+  transform: scale(1.1);
 }
