@@ -9,6 +9,8 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {APP_ROUTING} from './app.routes';
 import {PricesComponent} from './pages/prices/prices.component';
 import { HomeComponent } from './pages/home/home.component';
+import {ImageModule} from "primeng/image";
+import {DividerModule} from "primeng/divider";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    APP_ROUTING
+    APP_ROUTING,
+    ImageModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

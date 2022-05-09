@@ -1,5 +1,5 @@
 const executeParticlesMenu = function () {
-  particlesJS({
+  particlesJS("particles-menu", {
     "particles": {
       "number": {
         "value": 90,
@@ -72,7 +72,7 @@ const executeParticlesMenu = function () {
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": false,
+          "enable": true,
           "mode": "repulse"
         },
         "onclick": {
@@ -113,7 +113,7 @@ const executeParticlesMenu = function () {
 
 const executeParticlesBanner = function () {
   console.log("ejecutando particulas")
-  particlesJS( 'banner-particles',{
+  particlesJS('banner-particles', {
     "particles": {
       "number": {
         "value": 160,

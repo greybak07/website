@@ -1,92 +1,63 @@
-/** ISO AVATAR NAVBAR **/
-.img-avatar {
-  width: 13vw;
-}
-
-.iso-logo {
-  display: block;
-  transition: display 1s;
-}
-
-.hidden {
-  display: none;
-}
-
-.visuallyhidden {
-  opacity: 0;
-}
-
-/** CLASES DE MENU PRINCIPAL **/
-
-.navbar-menu {
-  background: transparent;
-}
-
-.nav__label {
-  position: fixed;
-  top: 0.1em;
-  right: 0.3em;
-  font-size: 1.5em;
-}
-
-.nav__label > button {
-  background: transparent;
-  border: none;
-}
-
-/*Input para controlar la vista*/
-.nav__input {
-  display: none;
-}
-
-.nav__input:checked ~ .nav__menu-particles {
-  clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
-}
-
-.nav__input:checked ~ .nav__menu {
-  clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
-}
-
-.nav__menu-particles {
-  background: #F9F9F9;
-  height: 100%;
-  width: 100%;
-  position: fixed;
+/*Icono de menu*/
+.menu-main__content {
+  position: absolute;
+  width: 100vw;
   top: 0;
-  bottom: 0;
-  left: -2.2em;
-  clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
-  transition: clip-path 1s ease-in-out;
-  z-index: 1;
-}
-
-.nav__menu {
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -2.2em;
-  padding-left: 3em;
-  padding-right: 3em;
+  left: 0;
   margin: 0;
-  clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
-  transition: clip-path 1s ease-in-out;
+  padding: 0;
+  z-index: 4;
+}
+
+.menu-icon__default {
+  background: var(--secondary-color);
+  padding: 0.5rem 0.5rem 0.8rem 1rem;
+  color: white;
+  /*margin: 0.5rem;*/
+  /*border-radius: 2rem;*/
+  border-bottom-left-radius: 2rem;
+  float: right;
+}
+
+/*Contenido de menu desplegado*/
+.menu__particles {
+  height: 100vh;
+  width: 100vw;
+  background: var(--main-light-color);
+  clip-path: polygon(0 0, 100% 0%, 100% 94%, 0 100%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
   z-index: 2;
 }
 
+.menu__container {
+  background: transparent;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
 /** ITEMS DE MENU **/
+
 .menu-items {
   list-style: none;
   padding-top: 5em;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
-.menu-items > li > a > h1 {
+.menu-items > li > a > span {
   font-size: 4vw;
   font-weight: bold;
   color: var(--main-color);
@@ -94,32 +65,33 @@ a {
   transition: font-size 1s;
 }
 
-.menu-items > li > a > h1:hover {
-  animation: headShake;
-  animation-duration: 1s;
-  color: var(--secondary-color);
+.menu-items > li > a > span:hover {
   font-size: 4.5vw;
-  text-shadow: 0px 2px 0px var(--main-light-color);
-}
-
-.active {
   color: var(--secondary-color);
+  animation: headShake;
+  animation-duration: .5s;
+  text-shadow: 0 2px 0 var(--main-light-color);
 }
 
-/** DIV COMPANY INFORMATION **/
+/*Media Query para items de links*/
+@media only screen and (max-width: 600px) {
+  .menu-items > li > a > span {
+    font-size: 10vw;
+  }
 
-.company-information {
-  padding-top: 6em;
-  padding-bottom: 5em;
+  .menu-items > li > a > span:hover {
+    font-size: 10.5vw;
+  }
 }
 
-.img-menu-iso {
-  max-height: 5em;
-  max-width: 20%;
-}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .menu-items > li > a > span {
+    font-size: 12vw;
+  }
 
-.img-menu-logo {
-  max-width: 60%;
+  .menu-items > li > a > span:hover {
+    font-size: 12.5vw;
+  }
 }
 
 /** SOCIAL MEDIA**/
@@ -134,8 +106,7 @@ a {
 
 .social-media-inline > li > a {
   color: var(--main-color);
-  padding-right: 2em;
-  font-size: 1.5em;
+  padding-right: 2rem;
 }
 
 .social-media-inline > li > a > i:hover {
@@ -143,3 +114,5 @@ a {
   animation: rubberBand;
   animation-duration: 1s;
 }
+
+

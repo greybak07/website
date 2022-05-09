@@ -1,70 +1,55 @@
-<nav class="navbar-menu fixed-top navbar-expand-lg  ">
-  <div class="container-fluid">
-    <a class="nav-link" [routerLink]="['/']">
-      <div #isoLogoNav class="iso-logo">
-        <img src="assets/images/logo-blanco.png" class="img-avatar" alt="greybak-iso">
+<div class="menu-main__content">
+  <span class="menu-icon__default pointer" (click)="openCloseMenu()">
+    <i *ngIf="!isOpen" class="pi pi-bars"></i>
+    <i *ngIf="isOpen" class="pi pi-times"></i>
+  </span>
+</div>
+
+<div *ngIf="isOpen">
+
+  <div class="menu__particles" id="particles-menu">
+    <!-- ANIMACION DE PARTICULAS -->
+  </div>
+  <div class="menu__container">
+    <!--    Links de menu-->
+    <ul class="menu-items">
+      <li>
+        <a [routerLink]="['/']" (click)="openCloseMenu()">
+          <span>INICIO </span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['prices']" (click)="openCloseMenu()">
+          <span>PRECIOS </span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['prices']" (click)="openCloseMenu()">
+          <span>SERVICIOS </span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['prices']" (click)="openCloseMenu()">
+          <span>CONTACTOS </span>
+        </a>
+      </li>
+    </ul>
+
+    <!--    Informacion de redes sociales-->
+    <div class="social-media__container">
+
+      <div class="">
+        <p-image [src]="logoUrl" alt="logo-greybak" width="250"></p-image>
       </div>
-    </a>
 
-    <label for="menu" class="nav__label ">
-      <button (click)="openCloseMenu()"><i [class]="menuIcon"></i></button>
-    </label>
+      <ul class="social-media-inline">
+        <li><a href=""><i class="pi pi-facebook" style="font-size: 1.5rem"></i></a></li>
+        <li><a href=""><i class="pi pi-instagram" style="font-size: 1.5rem"></i></a></li>
+        <li><a href=""><i class="pi pi-whatsapp" style="font-size: 1.5rem"></i></a></li>
+      </ul>
 
-    <input #menuInput type="checkbox" id="menu" [checked]="isOpen" class="nav__input">
-
-    <!-- HIDDEN MENU ALL PAGE -->
-    <div class="nav__menu">
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <ul class="menu-items">
-            <li>
-              <a [routerLink]="['/']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
-                INICIO </h1></a>
-            </li>
-            <li>
-              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
-                PRECIOS </h1></a>
-            </li>
-            <li>
-              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
-                SERVICIOS </h1></a>
-            </li>
-            <li>
-              <a [routerLink]="['prices']" (click)="openCloseMenu()"><h1 class="text-center" routerLinkActive="active">
-                CONTACTOS </h1></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-sm-12 company-information">
-          <div class="text-center">
-            <div #divIso>
-              <img src="assets/images/iso-out-1.png" class="img-fluid img-menu-iso" alt="greybak-iso-out-menu">
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="logo-content">
-              <div #divLogo class="logo-movement">
-                <img src="assets/images/logo-letras-blanco-orange.png" class="img-fluid img-menu-logo"
-                     alt="img-menu-logo">
-              </div>
-            </div>
-          </div>
-          <div #socialMedia class="text-center">
-            <ul class="social-media-inline">
-              <li>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-              </li>
-              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav__menu-particles" id="particles-js">
-      <!-- ANIMACION DE PARTICULAS -->
     </div>
 
   </div>
-</nav>
+
+</div>
