@@ -1,68 +1,73 @@
-/** IMAGENES DE FONDO SVG **/
-.svg-left-img {
-  height: 100vh;
-  z-index: -1;
-  position: absolute;
-  top: 0
-}
-
-/** MAIN BANNER **/
-.main-banner {
-  height: 100vh;
-  width: 100%;
-}
+/*.home-page__container {*/
+/*  height: 100vh;*/
+/*  width: 100vw;*/
+/*  position: absolute;*/
+/*  background: var(--main-color);*/
+/*}*/
 
 
-/** IMAGEN DE BANNER PRINCIPAL **/
-.img-banner {
-  max-height: 45vh;
-  position: relative;
-  top: 17vh;
-  right: -7vw;
-}
+/*!** IMAGENES DE FONDO SVG **!*/
+/*.svg-left-img {*/
+/*  height: 100vh;*/
+/*  z-index: -1;*/
+/*  position: absolute;*/
+/*  top: 0*/
+/*}*/
 
-.img-hidden {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: .7s ease-in-out all;
-}
-
-.visible {
-  opacity: 1;
-  transform: scale(1);
-  animation: flipInX;
-  animation-duration: 1s;
-}
+/*!** MAIN BANNER **!*/
+/*.main-banner {*/
+/*  height: 100vh;*/
+/*  width: 100%;*/
+/*}*/
 
 
-/** BANNER INFORMATION SECTION **/
+/*!** IMAGEN DE BANNER PRINCIPAL **!*/
+/*.img-banner {*/
+/*  max-height: 45vh;*/
+/*  position: relative;*/
+/*  top: 17vh;*/
+/*  right: -7vw;*/
+/*}*/
+
+/*.img-hidden {*/
+/*  opacity: 0;*/
+/*  transform: scale(0.9);*/
+/*  transition: .7s ease-in-out all;*/
+/*}*/
+
+/*.visible {*/
+/*  opacity: 1;*/
+/*  transform: scale(1);*/
+/*  animation: flipInX;*/
+/*  animation-duration: 1s;*/
+/*}*/
+
+
+/*!** BANNER INFORMATION SECTION **!*/
 
 .banner-title {
-  font-size: 5vw;
-  position: absolute;
-  top: 15vh;
-  left: 13vw;
+  font-size: 6rem;
 }
 
-.banner-subtitle {
-  font-size: 2vw;
-  position: absolute;
-  top: 45vh;
-  left: 13vw;
-}
+/*.banner-subtitle {*/
+/*  font-size: 2vw;*/
+/*  position: absolute;*/
+/*  top: 45vh;*/
+/*  left: 13vw;*/
+/*}*/
 
-.banner-btn {
-  position: absolute;
-  top: 60vh;
-  left: 13vw;
-}
+/*.banner-btn {*/
+/*  position: absolute;*/
+/*  top: 60vh;*/
+/*  left: 13vw;*/
+/*}*/
 
 
-/** CLASES GENERALES **/
+/*!** CLASES GENERALES **!*/
 
-.banner-box-container {
-  position: relative;
-}
+/*.banner-box-container {*/
+/*  position: relative;*/
+/*}*/
 
 
 

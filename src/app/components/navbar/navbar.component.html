@@ -5,51 +5,49 @@
   </span>
 </div>
 
-<div *ngIf="isOpen">
+<input hidden type="checkbox" id="menu" [checked]="isOpen" class="input-menu">
 
-  <div class="menu__particles" id="particles-menu">
-    <!-- ANIMACION DE PARTICULAS -->
-  </div>
-  <div class="menu__container">
-    <!--    Links de menu-->
+<div class="menu__particles" id="particles-menu">
+  <!-- ANIMACION DE PARTICULAS -->
+</div>
+<div class="menu__container">
+
+  <!--  Logotipo-->
+  <p-image [src]="logoUrl" alt="logo-greybak" width="250"></p-image>
+
+  <!--    Links de menu-->
+  <div>
     <ul class="menu-items">
       <li>
         <a [routerLink]="['/']" (click)="openCloseMenu()">
-          <span>INICIO </span>
+          <span>inicio </span>
         </a>
       </li>
       <li>
         <a [routerLink]="['prices']" (click)="openCloseMenu()">
-          <span>PRECIOS </span>
+          <span>precios </span>
         </a>
       </li>
       <li>
         <a [routerLink]="['prices']" (click)="openCloseMenu()">
-          <span>SERVICIOS </span>
+          <span>servicios </span>
         </a>
       </li>
       <li>
         <a [routerLink]="['prices']" (click)="openCloseMenu()">
-          <span>CONTACTOS </span>
+          <span>contactos </span>
         </a>
       </li>
     </ul>
+  </div>
 
-    <!--    Informacion de redes sociales-->
-    <div class="social-media__container">
-
-      <div class="">
-        <p-image [src]="logoUrl" alt="logo-greybak" width="250"></p-image>
-      </div>
-
-      <ul class="social-media-inline">
-        <li><a href=""><i class="pi pi-facebook" style="font-size: 1.5rem"></i></a></li>
-        <li><a href=""><i class="pi pi-instagram" style="font-size: 1.5rem"></i></a></li>
-        <li><a href=""><i class="pi pi-whatsapp" style="font-size: 1.5rem"></i></a></li>
-      </ul>
-
-    </div>
-
+  <!--    Informacion de redes sociales-->
+  <div class="mt-4 mb-3">
+    <ul class="social-media-inline">
+      <li><a href=""><i class="pi pi-facebook" style="font-size: 1.5rem"></i></a></li>
+      <li><a href=""><i class="pi pi-instagram" style="font-size: 1.5rem"></i></a></li>
+      <li><a href=""><i class="pi pi-whatsapp" style="font-size: 1.5rem"></i></a></li>
+    </ul>
   </div>
 
 </div>
