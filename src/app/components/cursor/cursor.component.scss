@@ -1,0 +1,29 @@
+.cursor-default__pointer {
+  width: 13px;
+  height: 13px;
+  background: var(--main-color);
+  border-radius: 2rem;
+  border: white solid 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.mouse-click {
+    opacity: 80%;
+  }
+}
+
+.cursor-default__pointer-delay {
+  width: 10px;
+  height: 10px;
+  background: var(--secondary-color);
+  opacity: 50%;
+  border-radius: 2rem;
+  position: absolute;
+  transition-duration: 60ms;
+
+  &.mouse-click {
+    opacity: 80%;
+  }
+}
+

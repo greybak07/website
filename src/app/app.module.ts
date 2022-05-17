@@ -11,13 +11,15 @@ import {PricesComponent} from './pages/prices/prices.component';
 import { HomeComponent } from './pages/home/home.component';
 import {ImageModule} from "primeng/image";
 import {DividerModule} from "primeng/divider";
+import { CursorComponent } from './components/cursor/cursor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PricesComponent,
-    HomeComponent
+    HomeComponent,
+    CursorComponent
   ],
   imports: [
     BrowserModule,

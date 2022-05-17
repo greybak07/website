@@ -6,29 +6,37 @@
   left: 0;
   margin: 0;
   padding: 0;
-  z-index: 4;
+  z-index: 5;
 }
 
 .menu-icon__default {
   background: var(--secondary-color);
   padding: 0.5rem 0.5rem 0.8rem 1rem;
   color: white;
-  /*margin: 0.5rem;*/
-  /*border-radius: 2rem;*/
   border-bottom-left-radius: 2rem;
   float: right;
 }
 
 /*Contenido de menu desplegado*/
+
+.input-menu:checked ~ .menu__particles {
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+}
+
+.input-menu:checked ~ .menu__container {
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+}
+
 .menu__particles {
   height: 100vh;
   width: 100vw;
   background: var(--main-light-color);
-  clip-path: polygon(0 0, 100% 0%, 100% 94%, 0 100%);
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  transition: clip-path 1s ease-in-out;
+  z-index: 3;
 }
 
 .menu__container {
@@ -42,7 +50,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  transition: clip-path 1s ease-in-out;
+  z-index: 4;
 }
 
 /** ITEMS DE MENU **/
@@ -58,7 +68,7 @@ a {
 }
 
 .menu-items > li > a > span {
-  font-size: 4vw;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--main-color);
   line-height: 1.5;
@@ -66,7 +76,7 @@ a {
 }
 
 .menu-items > li > a > span:hover {
-  font-size: 4.5vw;
+  /*font-size: 2.2rem;*/
   color: var(--secondary-color);
   animation: headShake;
   animation-duration: .5s;
@@ -74,25 +84,25 @@ a {
 }
 
 /*Media Query para items de links*/
-@media only screen and (max-width: 600px) {
-  .menu-items > li > a > span {
-    font-size: 10vw;
-  }
+/*@media only screen and (max-width: 600px) {*/
+/*  .menu-items > li > a > span {*/
+/*    font-size: 10vw;*/
+/*  }*/
 
-  .menu-items > li > a > span:hover {
-    font-size: 10.5vw;
-  }
-}
+/*  .menu-items > li > a > span:hover {*/
+/*    font-size: 10.5vw;*/
+/*  }*/
+/*}*/
 
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
-  .menu-items > li > a > span {
-    font-size: 12vw;
-  }
+/*@media only screen and (min-width: 600px) and (max-width: 1000px) {*/
+/*  .menu-items > li > a > span {*/
+/*    font-size: 12vw;*/
+/*  }*/
 
-  .menu-items > li > a > span:hover {
-    font-size: 12.5vw;
-  }
-}
+/*  .menu-items > li > a > span:hover {*/
+/*    font-size: 12.5vw;*/
+/*  }*/
+/*}*/
 
 /** SOCIAL MEDIA**/
 
@@ -114,5 +124,3 @@ a {
   animation: rubberBand;
   animation-duration: 1s;
 }
-
-
